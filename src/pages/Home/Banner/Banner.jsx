@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const Banner = () => {
     return (
-        <Carousel autoPlay={true} stopOnHover={true} className="text-center">
+        <Carousel autoPlay={true} stopOnHover={true} onChange={true} className="text-center">
         <div>
             <img src="https://i.ibb.co/Fb2rQbp/banner1.jpg" />
             <p className="legend"><span className=" text-3xl">Welcome to Artistry Junction!</span></p>
