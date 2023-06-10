@@ -1,31 +1,23 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const navLists = (
     <>
       <li>
-              <a>Home</a>
-            </li>
-            <li tabIndex={0}>
-              <details>
-                <summary>Instructors</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Classes</a>
-            </li>
-            <li>
-              <a>Dashboard</a>
-            </li>
-            <li>
-              <a>Login</a>
-            </li>
+        <Link to="/">Home</Link>
+      </li>
+      <li tabIndex={0}>
+        <Link to="/instructors">Instructors</Link>
+      </li>
+      <li>
+        <Link to="/classes">Classes</Link>
+      </li>
+      <li>
+        <Link to="/dashboard">Dashboard</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
     </>
   );
 
@@ -54,15 +46,13 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-             {navLists}
+              {navLists}
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">Artistry Junction</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {navLists}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navLists}</ul>
         </div>
         <div className="navbar-end">
           <a className="btn">Button</a>

@@ -1,7 +1,7 @@
 
 const Instructors  = () => {
     return (
-        <div>
+        <div className="pt-20">
             <h2>Popular Instructors</h2>
         </div>
     );
