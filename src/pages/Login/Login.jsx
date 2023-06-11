@@ -14,6 +14,9 @@ const Login = () => {
           const user = result.user;
           console.log(user);
         })
+        .catch((error) => {
+          console.log(error);
+        });
     };
     return (
         <div className="hero min-h-screen bg-base-200 py-20">
