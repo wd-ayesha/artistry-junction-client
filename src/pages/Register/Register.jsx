@@ -26,11 +26,11 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-base-200 py-20">
         <div className="hero-content flex-col">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Register now!</h1>
+          <div className="text-center">
+            <h1 className="text-5xl font-bold py-5">Register now!</h1>
           </div>
-          <div className="card max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+          <div className="card shadow-2xl bg-base-100">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body w-[400px]">
             <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
