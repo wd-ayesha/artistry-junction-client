@@ -4,6 +4,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
 const {user, logOut} = useContext(AuthContext);
+console.log(user?.email);
 
 const handleLogOut = () => {
   logOut()
@@ -29,8 +30,15 @@ const handleLogOut = () => {
       <li>
         <Link to="/register">Register</Link>
       </li>
+
       {
-        user ? <><button onClick={handleLogOut} className="btn btn-ghost">LogOut</button></> : <><li>
+        user ? <>
+        <div className="avatar">
+              <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src={user?.photoURL} title={user?.displayName} alt="" />
+              </div>
+            </div>
+        <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button></> : <><li>
         <Link to="/login">Login</Link>
       </li></>
       }
