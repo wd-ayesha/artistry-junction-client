@@ -17,6 +17,7 @@ const PopularInstructor = () => {
   return (
     <div className="pt-20">
       <h2 className="text-4xl pb-8 text-center">Popular Instructors</h2>
+      <div className="grid md:grid-cols-3 gap-10">
       {popularInstructor.map((pTeacher) => (
         <>
           <div className="card w-96 bg-base-100 shadow-xl">
@@ -31,6 +32,7 @@ const PopularInstructor = () => {
           </div>
         </>
       ))}
+      </div>
     </div>
   );
 };
