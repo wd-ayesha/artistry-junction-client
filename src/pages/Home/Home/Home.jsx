@@ -1,17 +1,18 @@
 import Banner from "../Banner/Banner";
-import Classes from "../Classes/Classes";
 import Counter from "../Counter/Counter";
-import Instructors from "../Instructors/Instructors ";
+import PopularClass from "../PopularClass/PopularClass";
+import PopularInstructor from "../PopularInstructor/PopularInstructor";
+
 
 const Home = () => {
-    return (
-        <div>
-            <Banner></Banner>
-            <Classes></Classes>
-            <Instructors></Instructors>
-            <Counter></Counter>
-        </div>
-    );
+  return (
+    <div>
+      <Banner></Banner>
+      <PopularClass></PopularClass>
+      <PopularInstructor></PopularInstructor>
+      <Counter></Counter>
+    </div>
+  );
 };
 
 export default Home;

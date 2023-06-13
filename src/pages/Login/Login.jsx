@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Login.css";
@@ -15,6 +15,11 @@ const Login = () => {
   } = useForm();
   const { logIn, googleLogIn } = useContext(AuthContext);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
   const onSubmit = (data) => {
     console.log(data);
     logIn(data.email, data.password)
@@ -22,9 +27,10 @@ const Login = () => {
         const user = result.user;
         console.log(user);
       })
-      .catch((error) => {
+      navigate(from, { replace: true });
+     /*  .catch((error) => {
         console.log(error);
-      });
+      }); */
   };
 
   const togglePasswordVisibility = () => {
