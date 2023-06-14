@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
+import { saveUser } from './../../api/auth';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -18,6 +19,8 @@ const Register = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
         updateUserProfile(loggedUser, data.name, data.photo);
+          // save user to db
+        saveUser(result.user)
       } catch (error) {
         console.log("Error:", error);
       }

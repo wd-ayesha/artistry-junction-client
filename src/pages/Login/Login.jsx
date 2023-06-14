@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Login.css";
+import { saveUser } from "../../api/auth";
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -41,6 +42,8 @@ const Login = () => {
     googleLogIn()
       .then((result) => {
         console.log(result.user);
+        // save user to db
+        saveUser(result.user)
       })
       .catch((error) => console.log(error));
   };
