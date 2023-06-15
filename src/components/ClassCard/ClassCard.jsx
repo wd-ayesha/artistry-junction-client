@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ClassCard = ({item}) => {
-    const { name, image, availableSeats, _id, category } = item;
+    const { name, image, availableSeats, price, _id, category } = item;
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -13,7 +13,7 @@ const ClassCard = ({item}) => {
     const handleAddToCart = item => {
         console.log(item);
         if(user && user.email){
-            const cartItem = {classId: _id, name, image, availableSeats, email: user.email}
+            const cartItem = {classId: _id, name, image, availableSeats, price, email: user.email}
             fetch('http://localhost:5000/carts', {
                 method: 'POST',
                 headers: {
@@ -60,6 +60,7 @@ const ClassCard = ({item}) => {
                 <h2 className="card-title">Name: {name}</h2>
                 <p>Available seats: {availableSeats}</p>
                 <p>Category: {category}</p>
+                <p>Price: {price}</p>
                 <div className="card-actions mt-3">
                   <button onClick={() => handleAddToCart(item)} className="btn btn-primary">Add to cart</button>
                 </div>

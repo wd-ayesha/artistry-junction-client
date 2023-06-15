@@ -5,8 +5,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import DashboardLayout from "../layouts/DashboardLayout";
-import AddClass from "../pages/Dashboard/AddClass";
 import PrivateRoute from "./PrivateRoute";
+import MyClassCart from "../pages/Dashboard/MyCart/MyClassCart";
 
 
 
@@ -44,8 +44,8 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
           {
-            path: "/dashboard/add-class",
-        element: <AddClass></AddClass>,
+            path: "class-cart",
+        element: <MyClassCart></MyClassCart>
           }
         ]
       },

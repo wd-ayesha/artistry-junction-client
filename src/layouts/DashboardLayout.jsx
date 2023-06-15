@@ -1,5 +1,10 @@
-import { FaCalendarAlt, FaHome, FaWallet } from "react-icons/fa";
-import { Link, Outlet } from "react-router-dom";
+import {
+  FaCalendarAlt,
+  FaHome,
+  FaShoppingCart,
+  FaWallet,
+} from "react-icons/fa";
+import { NavLink, Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
   return (
@@ -20,13 +25,24 @@ const DashboardLayout = () => {
         <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
           {/* Sidebar content here */}
           <li>
-            <Link><FaHome></FaHome>User Home</Link>
+            <NavLink to="/dashboard/home">
+              <FaHome></FaHome>User Home
+            </NavLink>
           </li>
           <li>
-          <Link><FaCalendarAlt></FaCalendarAlt>My Selected Classes</Link>
+            <NavLink to="/dashboard/setected">
+              <FaCalendarAlt></FaCalendarAlt>My Selected Classes
+            </NavLink>
           </li>
           <li>
-            <Link><FaWallet></FaWallet>Payment history</Link>
+            <NavLink to="/dashboard/history">
+              <FaWallet></FaWallet>Payment history
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard/class-cart">
+              <FaShoppingCart></FaShoppingCart>My Class Cart
+            </NavLink>
           </li>
         </ul>
       </div>
