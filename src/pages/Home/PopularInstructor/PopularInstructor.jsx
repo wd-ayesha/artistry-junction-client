@@ -21,7 +21,7 @@ const PopularInstructor = () => {
       {popularInstructor.map((pTeacher) => (
         <>
           <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
+            <figure className="mx-auto w-1/2">
               <img src={pTeacher.image} alt="teacher_img" />
             </figure>
             <div className="card-body">

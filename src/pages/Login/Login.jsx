@@ -45,7 +45,7 @@ const Login = () => {
         // save user to db
         saveUser(result.user)
       })
-      .catch((error) => console.log(error));
+      navigate(from, { replace: true });
   };
 
   return (
