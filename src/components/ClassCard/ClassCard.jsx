@@ -14,7 +14,7 @@ const ClassCard = ({item}) => {
         console.log(item);
         if(user && user.email){
             const cartItem = {classId: _id, name, image, availableSeats, price, email: user.email}
-            fetch('http://localhost:5000/carts', {
+            fetch('https://artistry-junction-server-wd-ayesha.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

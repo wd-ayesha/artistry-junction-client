@@ -5,7 +5,7 @@ const PopularClass = () => {
   const [popularClass, setPopularClass] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/classes")
+    fetch("https://artistry-junction-server-wd-ayesha.vercel.app/classes")
       .then((res) => res.json())
       .then((data) => {
         const popularClasses = data.filter(

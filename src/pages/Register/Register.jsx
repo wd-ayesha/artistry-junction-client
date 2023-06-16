@@ -18,6 +18,7 @@ const Register = () => {
         const result = await createUser(data.email, data.password);
         const loggedUser = result.user;
         console.log(loggedUser);
+        
         updateUserProfile(loggedUser, data.name, data.photo);
           // save user to db
         saveUser(result.user)

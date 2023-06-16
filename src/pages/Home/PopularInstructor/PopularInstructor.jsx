@@ -4,7 +4,7 @@ const PopularInstructor = () => {
   const [popularInstructor, setPopularInstructor] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/instructors")
+    fetch("https://artistry-junction-server-wd-ayesha.vercel.app/instructors")
       .then((res) => res.json())
       .then((data) => {
         const popularInstructors = data.filter(
