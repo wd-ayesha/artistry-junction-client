@@ -45,7 +45,7 @@ const logOut = () => {
             setLoading(false);
                // get and set token
                if(currentUser){
-                fetch('http://localhost:5000/jwt', {email: currentUser.email})
+                fetch('http://https://artistry-junction-server-wd-ayesha.vercel.app/jwt', {email: currentUser.email})
                 .then(data =>{
                     // console.log(data.data.token)
                     localStorage.setItem('access-token', data.data.token)
