@@ -8,6 +8,8 @@
 
 * Dark/light theme toggle from Daisy UI
 
+* jwt token is an excellent feature used for security purpose.
+
 * Mongodb database is excellent for storing dynamic data.
 
 * context API is an important feature in my project. It helps me to access data in multiple components.
